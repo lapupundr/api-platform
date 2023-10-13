@@ -18,27 +18,27 @@ class Book
 
     /** The ISBN of this book (or null if doesn't have one). */
     #[ORM\Column(nullable: true)]
-    #[Assert\Isbn]
+//    #[Assert\Isbn]
     public ?string $isbn = null;
 
     /** The title of this book. */
     #[ORM\Column]
-    #[Assert\NotBlank]
+//    #[Assert\NotBlank]
     public string $title = '';
 
     /** The description of this book. */
     #[ORM\Column(type: 'text')]
-    #[Assert\NotBlank]
+//    #[Assert\NotBlank]
     public string $description = '';
 
     /** The author of this book. */
     #[ORM\Column]
-    #[Assert\NotBlank]
+//    #[Assert\NotBlank]
     public string $author = '';
 
     /** The publication date of this book. */
     #[ORM\Column]
-    #[Assert\NotNull]
+//    #[Assert\NotNull]
     public ?\DateTimeImmutable $publicationDate = null;
 
     /** @var Review[] Available reviews for this book. */
